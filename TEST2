@@ -1,0 +1,23 @@
+while true do
+    
+    local success, errorMsg = pcall(function()
+        
+        game.Workspace.GameEvents.EatPlant:FireServer(game.Workspace.GameMap.Ferns.Fern, 10)
+        
+        
+        local A_1 = game.Workspace.GameMap.Water.Water
+        local A_2 = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.p
+        
+        
+        local Event = game.Workspace.GameEvents.addThirst
+        Event:FireServer(A_1, A_2)
+    end)
+    
+    
+    if not success then
+        print("Error occurred: " .. errorMsg)  
+    end
+
+    
+    wait(0.1)
+end
