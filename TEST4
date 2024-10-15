@@ -960,7 +960,7 @@ mainsec3:AddToggle({
         if (game:GetService("Players")["LocalPlayer"].PlayerGui.Interface:FindFirstChild("WaveProgression")) then
             while TL do 
                     if getclosestmob() ~= nil then 
-                        hrp.CFrame = getclosestmob().HumanoidRootPart.CFrame + Vector3.new(0, 2, 0)
+                        hrp.CFrame = getclosestmob().HumanoidRootPart.CFrame + Vector3.new(0, -2, 0)
                     end 
                 task.wait()    
             end 
